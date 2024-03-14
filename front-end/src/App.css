@@ -1,0 +1,540 @@
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> */
+.nav-ul{
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: grey;
+  text-decoration: underline;
+  text-decoration-color: grey;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+ 
+ 
+}
+.App-logo{
+  height: 40vmin;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.nav-ul li {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: underline;
+  text-decoration-color: grey;
+ 
+}
+.nav-ul a.active {
+  background-color: #b1e80e;
+  color: rgb(208, 12, 48);
+  text-decoration: underline;
+  text-decoration-color: grey;
+}
+
+/* Links on mouse-over */
+.nav-ul a:hover:not(.active) {
+  background-color: #182237;
+  color: rgb(195, 141, 24);
+  text-decoration: underline;
+  text-decoration-color: grey;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.content {
+  margin-left: 200px;
+  padding: 5px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .nav-ul {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .nav-ul a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .nav a {
+    text-align: center;
+    float: none;
+  }
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+  width: 100%;
+  background-color: gray;
+  margin-left: 200px;
+}
+
+/* Customize page styles here */
+
+.signuplabel{
+  width: 100%;
+  padding: 15px;
+  margin-left: 350px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  height:25px;
+  font-size: large;
+  color:slateblue;
+}
+.signupbox{
+  margin-left:400px ;
+  padding:1px solid black;
+  font-size:16px;
+  display:block;
+  width:30%;
+  height:100%;
+  padding:5px 10px;
+  background:none;
+  background-image:none;
+  border:2px solid black;
+  color:black;
+  border-radius:0;
+  }
+  .signinh1{
+    margin-left:500px ;
+    font-weight: bolder;
+    font-size: 28px;
+    color:slateblue;
+
+  }
+.signinp{
+  margin-left:500px ;
+  font-weight: bolder;
+
+}
+.signupbtn{
+  margin-left:600px ;
+  align-items: center;
+  padding: 5px;
+  width:10%;
+  background-color: slateblue;
+  font-weight: bolder;
+
+}
+
+.nav-ul-nav{
+  overflow: hidden;
+  background-color:grey;
+}
+
+.nav-ul-nav li {
+  float: right;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.logo{
+  width: 45px;
+  float:left ;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 20px;
+  
+}
+.product {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  
+}
+.formaddproduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.addproductinput {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-left:400px;
+  width:30%;
+}
+/* add product */
+
+.container {
+  
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left:300px ;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+.form input,
+.form textarea,
+.form select {
+  padding: 20px;
+  background-color: var(--bg);
+  color: black;
+  border: 2px solid #2e374a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form input{
+  width: 45%;
+}
+.form select {
+  width: 48%;
+}
+.form textarea{
+  width: 100%;
+}
+
+.form button{
+  width: 100%;
+  padding: 30px;
+  background-color: teal;
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.invalid-input{
+  width: 100%;
+  padding: 15px;
+  margin-left: 350px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  height:25px;
+  font-size: large;
+  color:red;
+}
+.Personaldetails{
+  text-align: center;
+  margin-top: 30px;
+  margin-left:8% ;
+ 
+}
+.Personaldetails ul li{
+  display: inline-block;
+  border: 1px solid black;
+  padding: 7px;
+  width: 190px;
+  color: slateblue;
+  font-weight: bold;
+  height: auto;
+}
+
+.Personaldetails ul{
+  margin:0px;
+  padding: 0px;
+
+}
+.SearchProduct{
+  width: 400px;
+  height: 20px;
+  margin: 20px;
+  border: 1px solid black;
+  padding-left: 20px;
+}
+
+/* task assign */
+
+.taskadd{
+  width: 25%;
+  padding: 30px;
+  margin-left: 380px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  height:15px;
+  font-size: 20px;
+  color:slateblue;
+  font-weight: bolder;
+}
+.taskinput{
+  margin-left:400px !important;
+  margin-right:650px !important; 
+  width:17% !important;
+  padding:1px solid black;
+  font-size:16px;
+  display:block;
+  background:none;
+  background-image:none;
+  border:2px solid black;
+  color:black;
+  border-radius:0;
+  }
+
+  .taskinputdropdown{
+    margin-left:400px ;
+    margin-right:650px !important; 
+    width:17% !important;
+    padding:1px solid black;
+    font-size:16px;
+    display:block;
+    background:none;
+    background-image:none;
+    border:2px solid black;
+    color:black;
+    border-radius:0;
+    }
+    
+
+    .datepicker{
+      margin-right:500px ;
+      margin-left:400px ;
+      width:17% !important;
+      padding:1px solid black;
+      font-size:16px;
+      display:block;
+      background:none;
+      background-image:none;
+      border:2px solid black;
+      color:black;
+      border-radius:0;
+    }
+
+    .tasksubmit{
+      margin-right:1600px ;
+      margin-left:450px ;
+
+    }
+    .headingtaskass{
+      margin-left: 450px;
+      font-weight: bolder;
+      font-size: 28px;
+      color:slateblue;
+    }
+
+    .headingtaskass1{
+      margin-left: 1000px;
+      font-weight: bolder;
+      font-size: 28px;
+      color:slateblue;
+    }
+
+
+    .capstonebox{
+      background-color: white;
+      width: 300px;
+      height: auto;
+      border: 5px solid slateblue;
+      padding: 50px;
+      margin: 10px;
+      
+    }
+
+    .capstone{
+      text-align: center;
+      margin-top: 30px;
+      margin-left:20px ;
+     
+    }
+    .capstone ul li{
+      display: inline-block;
+      border: 2px solid black;
+      padding: 14px ;
+      width: 170px;
+      height: auto;
+      font-size: 16px;
+      font-weight: bold;
+      color: slateblue;
+      
+    }
+    
+    .capstone ul{
+      margin:0px;
+      padding: 0px;
+    
+    }
+
+    .queries{
+      text-align: center;
+      margin-top: 30px;
+      margin-left:20px ;
+      height: auto;
+     
+    }
+    .queries ul li{
+      display: inline-block;
+      border: 2px solid black;
+      padding: 10px ;
+      width: 150px;
+      height: auto;
+      font-size: 16px;
+      font-weight: bold;
+      color: slateblue;
+      
+    }
+    
+    .queries ul{
+      margin:0px;
+      padding: 0px;
+      height: auto;
+    
+    }
+
+    .Todo {
+      display: flex;
+      margin: 0 -3rem 4px;
+      padding: 1.1rem 3rem;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .Todo-task {
+      position: relative;
+      transition: opacity 0.4s linear;
+    }
+    
+    .Todo-task.completed {
+      opacity: 0.6;
+    }
+    
+    .Todo-task.completed:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -0.5rem;
+      display: block;
+      width: 0%;
+      height: 2px;
+      background: #fff;
+      animation: strikeitem 0.5s ease-out 0s forwards;
+    }
+    
+    @keyframes strikeitem {
+      to {
+        width: calc(100% + 1rem);
+      }
+    }
+    
+    .requireborder{
+      margin-left: 300px;
+      border: 1px solid black;
+      height:350px;
+      margin-top: 30px;
+      
+      
+      
+    }
+    .priceborder{
+      height: 490px;
+      width: 800px;
+      border: 1px solid black;
+      margin: 15px 30%;
+      background-color:rgba(4, 93, 201, 0.869); 
+      display: flex;
+     
+    }
+    .Searchrequirement{
+      width: 400px;
+      height: 20px;
+      margin-left: 35%;
+      border: 1px solid black;
+      padding-left: 20px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding-top:15px;
+      font-size: 30px;
+      text-align: left;
+      margin-left: 150px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      background-color: white;
+      padding: 0px;
+    }
+
+    .grid-item1 {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding-top:15px;
+      font-size: 30px;
+      text-align: center;
+
+     
+      
+    }
+    .grid-item2 {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding-top:15px;
+      font-size: 30px;
+      text-align: left;
+      margin-left: 150px;
+      color: white;
+      
+    
+      
+    }
+
+    .Searchrequirement2{
+      width: 430px;
+      height: 40px;
+      margin-left: 39%;
+      border: 1px solid black;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    .applications1{
+      margin-left : 300px;
+    }
+    .totalarea{
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto   ;
+      background-color: white;
+      padding: 0px;
+      border: 1px solid white;
+      height: auto;
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+    .task1{
+      border: 1px solid black;
+      height: auto;
+      margin-left:2% ;  
+      padding: 15px;
+      text-align: center; 
+      border-radius: 10px;
+    }
