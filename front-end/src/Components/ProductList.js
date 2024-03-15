@@ -13,7 +13,7 @@ const ProductList = ({addcapstone,setAddcapstone}) => {
     },[])
 
     const getProducts=async()=>{
-        let result=await fetch('http://localhost:3000/personal-details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/personal-details',{
             headers:{
                         authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                     }
@@ -25,7 +25,7 @@ const ProductList = ({addcapstone,setAddcapstone}) => {
    
 
     const gettaskdetails=async()=>{
-        let result=await fetch('http://localhost:3000/addTask-details')
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/addTask-details')
         // {
         //     headers:{
         //                 authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -38,7 +38,7 @@ const ProductList = ({addcapstone,setAddcapstone}) => {
     //console.warn("products",products)
 
     const deletedetails=async (id)=>{
-        let result=await fetch(`http://localhost:3000/personal-details/${id}`,{
+        let result=await fetch(`https://studentdashboard-new-2.onrender.com/personal-details/${id}`,{
             method:"Delete"
 
         });
@@ -51,7 +51,7 @@ const ProductList = ({addcapstone,setAddcapstone}) => {
     }
 
     const productdelete=async (id)=>{
-        let result=await fetch(`http://localhost:3000/addTask-details/${id}`,{
+        let result=await fetch(`https://studentdashboard-new-2.onrender.com/addTask-details/${id}`,{
             method:"Delete"
 
         });
@@ -67,7 +67,7 @@ const ProductList = ({addcapstone,setAddcapstone}) => {
     const searchhandle=async(event)=>{
         let key=event.target.value;
         if(key){
-            let result=await fetch(`http://localhost:3000/search/${key}`,{
+            let result=await fetch(`https://studentdashboard-new-2.onrender.com/search/${key}`,{
                 headers:{
                             authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                         }
@@ -88,7 +88,7 @@ const ProductList = ({addcapstone,setAddcapstone}) => {
     const searchtaskdetails=async(event)=>{
         let key=event.target.value;
         if(key){
-            let result=await fetch(`http://localhost:3000/searchtask/${key}`)
+            let result=await fetch(`https://studentdashboard-new-2.onrender.com/searchtask/${key}`)
             //     headers:{
             //                 authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
             //             }

@@ -24,7 +24,7 @@ import { useNavigate, useParams } from 'react-router-dom';
     },[])
 
     const getProductdetails=async()=>{
-      let result=await fetch(`http://localhost:3000/personal-details/${params.id}`,{
+      let result=await fetch(`https://studentdashboard-new-2.onrender.com/personal-details/${params.id}`,{
         headers:{
                     authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
@@ -51,7 +51,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
     const updateproduct=async()=>{
       console.log(name,email,age,phonenumber,gender,spec,address,category,city,state,pincode,desc)
-      let result=await fetch(`http://localhost:3000/personal-details/${params.id}`,{
+      let result=await fetch(`https://studentdashboard-new-2.onrender.com/personal-details/${params.id}`,{
         method:"Put",
         body:JSON.stringify({name,email,age,phonenumber,gender,spec,address,category,city,state,pincode,desc}),
         headers:{

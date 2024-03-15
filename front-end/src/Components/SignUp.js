@@ -18,7 +18,7 @@ const SignUp=()=>{
 
     const collectData=async()=>{
        // console.warn(name,password,email)
-        let result=await fetch('http://localhost:3000/register',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/register',{
             method:"post",
             body:JSON.stringify({name,email,password}),
             headers:{

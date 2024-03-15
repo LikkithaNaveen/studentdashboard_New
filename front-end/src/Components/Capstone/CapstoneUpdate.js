@@ -16,7 +16,7 @@ import { useNavigate, useParams } from 'react-router-dom';
     },[])
 
     const getCapstoneupdatedetails=async()=>{
-      let result=await fetch(`http://localhost:3000/capstone-details/${params.id}`,{
+      let result=await fetch(`https://studentdashboard-new-2.onrender.com/capstone-details/${params.id}`,{
         headers:{
                     authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
@@ -36,7 +36,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
     const UpdateCapstone=async()=>{
       //console.log(name,course,language,taskdetails,assigndate,completedate,desc)
-      let result=await fetch(`http://localhost:3000/capstone-details/${params.id}`,{
+      let result=await fetch(`https://studentdashboard-new-2.onrender.com/capstone-details/${params.id}`,{
         method:"Put",
         body:JSON.stringify({name,capstonetitle,language,status,desc}),
         headers:{

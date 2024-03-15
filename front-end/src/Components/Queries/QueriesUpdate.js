@@ -17,7 +17,7 @@ import { useNavigate, useParams } from 'react-router-dom';
     },[])
 
     const getQueriesdetails=async()=>{
-      let result=await fetch(`http://localhost:3000/Queries-details/${params.id}`,{
+      let result=await fetch(`https://studentdashboard-new-2.onrender.com/Queries-details/${params.id}`,{
         headers:{
                     authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
@@ -38,7 +38,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
     const UpdateQueries=async()=>{
       //console.log(name,course,language,taskdetails,assigndate,completedate,desc)
-      let result=await fetch(`http://localhost:3000/Queries-details/${params.id}`,{
+      let result=await fetch(`https://studentdashboard-new-2.onrender.com/Queries-details/${params.id}`,{
         method:"Put",
         body:JSON.stringify({name,topiccategory,language,title,querydesc,timings}),
         headers:{

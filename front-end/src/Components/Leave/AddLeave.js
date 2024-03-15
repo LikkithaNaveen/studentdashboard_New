@@ -22,7 +22,7 @@ const AddLeave = () => {
         }
        
         const userId=JSON.parse(localStorage.getItem('user'))._id
-        let result=await fetch('http://localhost:3000/Leave-Details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/Leave-Details',{
             method:"post",
             body:JSON.stringify({name,days,fromdate,todate,reason,userId}),
             headers:{

@@ -22,7 +22,7 @@ const AddQueries = () => {
         }
        
         const userId=JSON.parse(localStorage.getItem('user'))._id
-        let result=await fetch('http://localhost:3000/Queries-details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/Queries-details',{
             method:"post",
             body:JSON.stringify({name,topiccategory,language,title,querydesc,timings,userId}),
             headers:{

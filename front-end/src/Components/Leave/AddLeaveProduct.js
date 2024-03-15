@@ -9,7 +9,7 @@ const AddProductLeave = () => {
     },[])
 
     const getaddleave=async()=>{
-        let result=await fetch('http://localhost:3000/Leave-Details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/Leave-Details',{
             headers:{
                         authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                     }
@@ -24,7 +24,7 @@ const AddProductLeave = () => {
 
 
     const leavedelete=async (id)=>{
-        let result=await fetch(`http://localhost:3000/Leave-Details/${id}`,{
+        let result=await fetch(`https://studentdashboard-new-2.onrender.com/Leave-Details/${id}`,{
             method:"Delete"
 
         });
@@ -40,7 +40,7 @@ const AddProductLeave = () => {
     const searchleave=async(event)=>{
         let key=event.target.value;
         if(key){
-            let result=await fetch(`http://localhost:3000/searchleave/${key}`)
+            let result=await fetch(`https://studentdashboard-new-2.onrender.com/searchleave/${key}`)
             //     headers:{
             //                 authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
             //             }

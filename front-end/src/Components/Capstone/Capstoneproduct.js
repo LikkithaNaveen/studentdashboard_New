@@ -9,7 +9,7 @@ const CapstoneProduct = () => {
     },[])
 
     const getCapstonedetails=async()=>{
-        let result=await fetch('http://localhost:3000/capstone-details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/capstone-details',{
             headers:{
                         authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                     }
@@ -24,7 +24,7 @@ const CapstoneProduct = () => {
 
 
     const capstonedelete=async (id)=>{
-        let result=await fetch(`http://localhost:3000/capstone-details/${id}`,{
+        let result=await fetch(`https://studentdashboard-new-2.onrender.com/capstone-details/${id}`,{
             method:"Delete"
 
         });
@@ -40,7 +40,7 @@ const CapstoneProduct = () => {
     const searchcapstonedetails=async(event)=>{
         let key=event.target.value;
         if(key){
-            let result=await fetch(`http://localhost:3000/searchcapstone/${key}`)
+            let result=await fetch(`https://studentdashboard-new-2.onrender.com/searchcapstone/${key}`)
             //     headers:{
             //                 authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
             //             }

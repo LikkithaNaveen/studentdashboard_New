@@ -9,7 +9,7 @@ const QueriesProduct = () => {
     },[])
 
     const getQueryProduct=async()=>{
-        let result=await fetch('http://localhost:3000/Queries-details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/Queries-details',{
             headers:{
                         authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                     }
@@ -24,7 +24,7 @@ const QueriesProduct = () => {
 
 
     const Querydelete=async (id)=>{
-        let result=await fetch(`http://localhost:3000/Queries-details/${id}`,{
+        let result=await fetch(`https://studentdashboard-new-2.onrender.com/Queries-details/${id}`,{
             method:"Delete"
 
         });
@@ -40,7 +40,7 @@ const QueriesProduct = () => {
     const searchQueryproduct=async(event)=>{
         let key=event.target.value;
         if(key){
-            let result=await fetch(`http://localhost:3000/searchqueries/${key}`)
+            let result=await fetch(`https://studentdashboard-new-2.onrender.com/searchqueries/${key}`)
             //     headers:{
             //                 authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
             //             }

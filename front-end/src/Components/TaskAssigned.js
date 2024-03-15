@@ -20,7 +20,7 @@ const TaskAssigned = () => {
         }
        
         const userId=JSON.parse(localStorage.getItem('user'))._id
-        let result=await fetch('http://localhost:3000/addTask-details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/addTask-details',{
             method:"post",
             body:JSON.stringify({name,course,language,taskdetails,assigndate,completedate,desc,userId}),
             headers:{

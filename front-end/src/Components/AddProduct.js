@@ -23,7 +23,7 @@ import React ,{useEffect, useState}from 'react'
             return false;
         }
         const userId=JSON.parse(localStorage.getItem('user'))._id
-        let result=await fetch('http://localhost:3000/personal-details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/personal-details',{
             method:"post",
             body:JSON.stringify({name,email,age,phonenumber,gender,spec,address,category,city,state,pincode,desc,userId}),
             headers:{

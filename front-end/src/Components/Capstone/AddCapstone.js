@@ -21,7 +21,7 @@ const AddCapstone = () => {
         }
        
         const userId=JSON.parse(localStorage.getItem('user'))._id
-        let result=await fetch('http://localhost:3000/capstone-details',{
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/capstone-details',{
             method:"post",
             body:JSON.stringify({name,capstonetitle,language,status,desc,userId}),
             headers:{
