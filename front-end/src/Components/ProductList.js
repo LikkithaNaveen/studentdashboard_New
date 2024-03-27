@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import CapstoneProduct from './Capstone/Capstoneproduct';
 
-const ProductList = ({addcapstone,setAddcapstone}) => {
+const ProductList = () => {
     const[products,setProducts]=useState([])
     const[taskassign,setTaskassign]=useState([])
     
@@ -13,11 +13,12 @@ const ProductList = ({addcapstone,setAddcapstone}) => {
     },[])
 
     const getProducts=async()=>{
-        let result=await fetch('https://studentdashboard-new-2.onrender.com/personal-details',{
-            headers:{
-                        authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
-                    }
-        })
+        let result=await fetch('https://studentdashboard-new-2.onrender.com/personal-details')
+        // {
+        //     headers:{
+        //                 authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
+        //             }
+        // })
        
         result=await result.json()
         setProducts(result)

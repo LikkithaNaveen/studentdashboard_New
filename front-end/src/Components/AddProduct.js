@@ -28,7 +28,7 @@ import React ,{useEffect, useState}from 'react'
             body:JSON.stringify({name,email,age,phonenumber,gender,spec,address,category,city,state,pincode,desc,userId}),
             headers:{
                 'Content-Type':'application/json',
-                authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
+                //authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
             },  
         });
         result=await result.json()
