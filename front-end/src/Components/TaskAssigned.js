@@ -12,12 +12,15 @@ const TaskAssigned = () => {
     const[error,setError]=useState(false)
 
     const taskproduct=async()=>{
+
+
         console.warn(name,course,language,taskdetails,assigndate,completedate,desc)
         if(!name|| !course|| !language|| !taskdetails|| !assigndate|| !completedate|| !desc)
         {
             setError(true)
             return false;
         }
+
        
         const userId=JSON.parse(localStorage.getItem('user'))._id
         let result=await fetch('https://studentdashboard-new-2.onrender.com/addTask-details',{
@@ -37,7 +40,8 @@ const TaskAssigned = () => {
 
     return (
     <div className="container">
-        <h1 class='headingtaskass'> Task Assigned Details </h1>
+     
+        <h1 class='headingtaskass'>Task Assigned Details </h1>
       <form  className="form">
         <label class="taskadd">Name</label><br></br>
         <input type="text" placeholder="Name" name="Name"  class="taskinput"

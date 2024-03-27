@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useCallback } from 'react'
 import { Link } from 'react-router-dom';
 import CapstoneProduct from './Capstone/Capstoneproduct';
+import Calender from './Calender'
 
 const ProductList = () => {
     const[products,setProducts]=useState([])
     const[taskassign,setTaskassign]=useState([])
+   
+
+    const auth=localStorage.getItem('user')
+    
     
 
     useEffect(()=>{
@@ -109,6 +114,17 @@ const ProductList = () => {
   return (
     <div className="Personaldetails">
 
+<div class='mainimage'>
+      <img src="https://i.pinimg.com/736x/d6/01/16/d60116fccfec4fadb63dc46b628cc344.jpg" height={200}/>
+        <div class='maincontent'>
+            
+            <h1>Hello ({JSON.parse(auth).name})</h1>
+            <h5>Welocme to Dashboard</h5>
+        </div>
+
+       <div> <Calender/></div>
+            
+        </div>
 
 
         <div class='totalarea'>
